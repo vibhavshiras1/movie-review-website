@@ -1,0 +1,208 @@
+<html>
+    <head><title>Movies</title>
+        <script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script> 
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script> 
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+    </head>
+    
+    <body bgcolor="black">
+        <div id="root"></div>
+    
+
+        <script type="text/babel">
+        
+
+            class Info extends React.Component{
+                constructor(props){
+                    super(props);
+                    this.state = {rating1 : '',rating2:'',rating3:'',rating4:''};
+                    this.ratefunc = this.ratefunc.bind(this);
+                    this.ratefunc1 = this.ratefunc1.bind(this);
+                    this.ratefunc2 = this.ratefunc2.bind(this);
+                    this.ratefunc3 = this.ratefunc3.bind(this);
+                }
+                ratefunc=function(){
+                    var val = document.getElementById('rating').value;
+                    this.state.rating1 = val;
+                    document.getElementById('demo').innerHTML = "Your Rating : "+this.state.rating1+"/10";
+                }
+                ratefunc1=function(){
+                    var val = document.getElementById('rating1').value;
+                    this.state.rating2 = val;
+                    document.getElementById('demo1').innerHTML = "Your Rating : "+this.state.rating2+"/10";
+                }
+                ratefunc2=function(){
+                    var val = document.getElementById('rating2').value;
+                    this.state.rating3 = val;
+                    document.getElementById('demo2').innerHTML = "Your Rating : "+this.state.rating3+"/10";
+                }
+                ratefunc3=function(){
+                    var val = document.getElementById('rating3').value;
+                    this.state.rating4 = val;
+                    document.getElementById('demo3').innerHTML = "Your Rating : "+this.state.rating4+"/10";
+                }
+
+                render(){
+                    return(
+                        <div>
+                            <h1 class="heading1"><center>Highest Rated Movies</center></h1>
+                            <img src={"https://d2e111jq13me73.cloudfront.net/sites/default/files/styles/product_image_aspect_switcher_170w/public/product-images/csm-movie/shaw-poster.jpg?itok=RQn-PjG5"} class="image1"/>
+                            <h2 class="heading2">The Shawshank Redemption</h2> 
+                            <p class="star">&#9734; 9.3</p>
+                            <div class="info1">
+                                <p>Year : 1994</p>
+                                <p>Description : Andy Dufresne, a successful banker, is arrested for the murders of his wife and her lover, 
+                                    and is sentenced to life imprisonment at the Shawshank prison. He becomes the most unconventional prisoner.</p>
+                                    
+                                        <label for="rating">Rate this movie : </label>
+                                        <select name="rating" id="rating">
+                                                <option value="Rating (1-10)" style={{width:'500px'}}>Rating (1-10)</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button type="button" onClick={this.ratefunc}>Submit</button>
+                                    <p id="demo" class="demo"></p>
+                                </div>
+
+                            <img src={"https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"} style={{top:'450px'}} class="image1"/>
+                            <h2 class="heading2" style={{top:'450px'}}>The Godfather</h2> 
+                            <p class="star" style={{top:'360px'}}>&#9734; 9.2</p>
+                            <div class="info1" style={{top:'500px'}}>
+                                <p>Year : 1972</p>
+                                <p>Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael.
+                                     However, his decision unintentionally puts the lives of his loved ones in grave danger.</p>
+
+                                     <label for="rating1">Rate this movie : </label>
+                                        <select name="rating1" id="rating1">
+                                                <option value="Rating (1-10)" style={{width:'500px'}}>Rating (1-10)</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button type="button" onClick={this.ratefunc1}>Submit</button>
+                                    <p id="demo1" class="demo"></p>
+                                </div>
+
+                            <img src={"https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UY1200_CR90,0,630,1200_AL_.jpg"} style={{top:'850px'}} class="image1"/>
+                            <h2 class="heading2" style={{top:'850px'}}>Parasite</h2> 
+                            <p class="star" style={{top:'750px'}}>&#9734; 8.6</p>
+                            <div class="info1" style={{top:'900px'}}>
+                                <p>Year : 2019</p>
+                                <p>Greed and class discrimination threaten the newly formed symbiotic 
+                                    relationship between the wealthy Park family and the destitute Kim clan.</p>
+                                    <label for="rating2">Rate this movie : </label>
+                                        <select name="rating2" id="rating2">
+                                                <option value="Rating (1-10)" style={{width:'500px'}}>Rating (1-10)</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button type="button" onClick={this.ratefunc2}>Submit</button>
+                                    <p id="demo2" class="demo"></p>
+                                </div>
+
+                            <img src={"https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"} style={{top:'1250px'}} class="image1"/>
+                            <h2 class="heading2" style={{top:'1250px'}}>Joker</h2> 
+                            <p class="star" style={{top:'1150px'}}>&#9734; 8.5</p>
+                            <div class="info1" style={{top:'1300px'}}>
+                                <p>Year : 2019</p>
+                                <p>Arthur Fleck, a party clown, leads an impoverished life with his ailing mother. However, when society shuns him and brands 
+                                    him as a freak, he decides to embrace the life of crime and chaos.</p>
+                                    <label for="rating3">Rate this movie : </label>
+                                        <select name="rating3" id="rating3">
+                                                <option value="Rating (1-10)" style={{width:'500px'}}>Rating (1-10)</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button type="button" onClick={this.ratefunc3}>Submit</button>
+                                    <p id="demo3" class="demo"></p>
+                                </div>
+                                
+                            </div>
+
+                            
+                    )
+                }
+            }
+
+            ReactDOM.render(<Info/>,document.getElementById('root'));
+        </script>
+    </body>
+    <style>
+        body, html{
+    height: 100%;
+    margin: 0;
+}
+.heading1{
+    color: white;
+    font-size: 40px;
+    background-color: darkblue;
+    width: 100%;
+    position: sticky;
+}
+.image1{
+    height: 300px;
+    width: 180px;
+    left: 20px;
+    position: absolute;
+}
+.heading2{
+    position: absolute;
+    left: 220px;
+    color: white;
+    font-size: 30px;
+}
+.info1{
+    position: absolute;
+    left: 220px;
+    top: 120px;
+    font-size: 28px;
+    color: white;
+}
+.star{
+    font-size: 30px;
+    position: absolute;
+    top: -30px;
+    left: 800px;
+    color: gold;
+    font-size: 100px;
+}
+.demo{
+    position:absolute;
+    top: 180px;
+    left:500px;
+    color: aqua;
+}
+
+    </style>
+</html>
