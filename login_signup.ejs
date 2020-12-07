@@ -1,0 +1,116 @@
+<html>
+    <head><title>Login/Signup</title></head>
+
+    <style>
+        body, html{
+            height : 100%;
+            margin: 0;
+        }
+        .bg{
+            background-image: url("https://flashbak.com/wp-content/uploads/2014/07/collage-copy.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .heading1{
+            color: white;
+            font-size: 40px;
+            background-color: darkblue;
+            width: 100%;
+            position: sticky;
+        }
+        .login{
+            color: darkslateblue;
+            position: absolute;
+            font-size: 40px;
+            top: 100px;
+            left: 250px;
+           background-color: cyan;
+           width: 150px;
+        }
+        .login_info{
+            color: darkslateblue;
+            font-size: 30px;
+            position: absolute;
+            top: 230px;
+            left: 110px;
+            width: 450px;
+            height: 80px;
+        }
+        .login_btn{
+            position: absolute;
+            left: 135px;
+            top: 120px;
+            height: 50px;
+            width: 120px;
+            font-size: 20px;
+            color: white;
+            background-color: darkcyan;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .signup{
+            color: darkslateblue;
+            font-size: 40px;
+            position: absolute;
+            top: 100px;
+            left: 900px;
+            background-color: cyan;
+            width: 170px;
+        }
+        .signup_info{
+            color: darkslateblue;
+            font-size: 30px;
+            position: absolute;
+            top: 230px;
+            left: 750px;
+            height: 180px;
+            width: 450px;
+        }
+        .signup_btn{
+            position: absolute;
+            left: 170px;
+            top: 200px;
+            height: 50px;
+            width: 120px;
+            font-size: 20px;
+            color: white;
+            background-color: darkcyan;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <div class="bg">
+        <h1 class="heading1"><center>Movie Website</center></h1>
+        
+        <h2 class="login"><center>Log-In</center></h2>
+        <form action="/" method="POST" autocomplete="off">
+        <div class="login_info" style="background-color: cyan;"><center><b>
+        Username &nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;<input type="text" name="username1" style="font-size: 16px;background-color: darkgray;"></br>
+        Password &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;<input type="password" name="password1" style="font-size : 16px;background-color: darkgray;"></br></b>
+        <button type="submit" class="login_btn">Log-In</button></center>
+        </div>
+        </form>
+        
+        <h2 class="signup"><center>Sign-Up</center></h2>
+        <form action="/" method="POST" autocomplete="off">
+        <div class="signup_info" style="background-color: cyan;"><center><b>
+            Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name2" style="font-size: 16px;background-color: darkgray;"></br>
+            Username &nbsp;:&nbsp;&nbsp; <input type="text" name="username2" style="font-size: 16px;background-color: darkgray;"></br>
+            E-Mail&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" name="email2" style="font-size: 16px;background-color: darkgray;"></br>
+            Phone No &nbsp;:&nbsp;&nbsp;&nbsp; <input type="text" name="phone2" style="font-size: 16px;background-color: darkgray;"></br>
+            Password &nbsp;:&nbsp;&nbsp;&nbsp; <input type="text" name="password2" style="font-size: 16px;background-color: darkgray;"></br></b>
+            <button type="submit" class="signup_btn">Sign-Up</button></center>
+        </div>
+        </form>
+        </div>
+    </body>
+    <script>
+        /*https://lightartacademy.com/blog/wp-content/uploads/2015/11/favorite-sci-fi-posters.jpg*/
+    </script>
+</html>
